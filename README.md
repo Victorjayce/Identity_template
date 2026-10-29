@@ -206,25 +206,3 @@ To uninstall it, use the template identity shown by `dotnet new list`:
 ```powershell
 dotnet new uninstall Victorjayce.AspNetCore.IdentityApi
 ```
-
-## Files intentionally excluded from generated projects
-
-The template currently excludes:
-
-- `.git`
-- `.vs`
-- `bin`
-- `obj`
-- `Migrations`
-- `Identity_template.slnx`
-
-The generated project receives a new project filename and namespace based on the name passed to `dotnet new`.
-
-## Security reminders
-
-- Never commit production connection strings or JWT signing keys.
-- Use user secrets, environment variables, or a secure configuration provider for secrets.
-- Use HTTPS outside local development.
-- Use a strong, sufficiently long JWT signing key.
-- Review role and user-seeding behavior before deploying to production.
-- Apply migrations deliberately in production rather than automatically without review.
